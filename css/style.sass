@@ -24,6 +24,77 @@ $blue: #007bff
 	box-shadow: 0px 0px 5px #000
 	position: relative
 	z-index: 10
+	background: linear-gradient(to right, #3f4850 0%, #3a4e59 25%, #38545f 50%, #43554d 75%, #573d4e 100%);
+	.header_nav
+		width: 50%
+		display: inline-block
+		font-size: 14px
+		.header_nav_list, .header_nav_content
+			height: 40px
+			margin: 0px 0px
+			width: 100%
+		.header_nav_list
+			ul
+				
+				width: 100%
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				justify-content: space-around
+				align-items: center
+				height: 100%
+				color: #fff
+				.header_nav_list_item
+					display: inline-block
+					list-style-type: none
+					height: 100%
+					padding: 0px 10px
+					transition: .3s
+					a
+						vertical-align: middle
+						display: inline-block
+						text-decoration: none
+						line-height: 40px
+						color: #fff
+				.header_nav_list_item:hover
+					background-color: #344047
+				.header_nav_list_item.active
+					background-color: #344047
+		.header_nav_content
+			background-color: #3d4a54
+			ul
+				.header_nav_content_item
+					display: none
+					transition: .3s	
+					ul
+						width: 100%
+						display: -webkit-flex
+						display: -moz-flex
+						display: -ms-flex
+						display: -o-flex
+						display: flex
+						justify-content: space-around
+						align-items: center
+						height: 100%
+					li
+						display: inline-block
+						list-style-type: none
+						height: 100%
+						padding: 0px 10px
+						transition: .3s
+						a
+							vertical-align: middle
+							display: inline-block
+							text-decoration: none
+							line-height: 40px
+							color: #fff
+					li:hover
+						background-color: #344047
+				.header_nav_content_item.active
+					display: block
+					background-color: #344047
 	.header_settings
 		width: 100%
 		height: 100%
@@ -33,14 +104,13 @@ $blue: #007bff
 		display: -ms-flex
 		display: -o-flex
 		display: flex
-		justify-content: space-between
+		justify-content: flex-end
 		align-items: center
-		background: linear-gradient(to right, #3f4850 0%, #3a4e59 25%, #38545f 50%, #43554d 75%, #573d4e 100%);
 		> div, > p, > a
 			display: inline-block
 			color: #fff
 		.logo 
-			height: 100%
+			
 			margin-right: auto
 			display: -webkit-flex
 			display: -moz-flex
@@ -49,17 +119,20 @@ $blue: #007bff
 			display: flex
 			justify-content: flex-start
 			align-items: center
-			margin-right: 40px	
+			margin-right: 40px
+			background-color: rgba(255, 255, 255, 0.15)
+			padding: 15px 15px
+			border-radius: 5px
 			img
 				height: 50%
 				display: inline-block
 			.logo_text
 				display: inline-block
 				p
-					font-size: 16px
+					font-size: 20px
 					span
 						font-size: 12px
-			.name
+		.name
 			font-size: 16px
 			padding: 5px 15px
 			background-color: rgba(255, 255, 255, 0.15)
@@ -90,7 +163,7 @@ $blue: #007bff
 	height: 100%
 	position: relative
 	float: left
-	width: 300px
+	width: 250px
 	padding-top: 5px
 	padding-bottom: 5px
 	padding: 15px
@@ -124,13 +197,19 @@ $blue: #007bff
 	background-color: $blue
 .mCSB_scrollTools .mCSB_draggerContainer .mCSB_draggerRail 
 	background-color: $gray
+.mCSB_scrollTools .mCSB_draggerContainer .mCSB_dragger:hover
+	.mCSB_dragger_bar
+		background-color: rgba(0, 123, 255, 0.6)
+.mCSB_scrollTools_onDrag .mCSB_draggerContainer .mCSB_dragger_onDrag
+	.mCSB_dragger_bar
+		background-color: rgba(0, 123, 255, 0.6)
 #mCSB_2_container 
 	margin-right: 10px
 .content_box
 	display: inline-block
 	position: relative
 	height: 100%
-	width: calc(100% - 300px)
+	width: calc(100% - 250px)
 .main_content
 	height: 100%
 	width: 100%
@@ -210,6 +289,8 @@ $blue: #007bff
 					background-color: #e8e8e8
 					font-size: 18px
 					padding: 10px
+				th:first-of-type, th:last-of-type
+					width: 40px
 				td
 					input, select
 						text-align: center
@@ -229,8 +310,11 @@ $blue: #007bff
 							background-color: transparent
 					select:focus, input:focus
 						border: 2px solid $lightblue
-						box-shadow: 0px 0px 5px 1px $lightblue;
-
+						box-shadow: 0px 0px 5px 1px $lightblue
+					a
+						text-decoration: none
+						color: #bb3d4e
+						font-size: 22px
 
 .footer
 	border-left: 2px solid $gray

@@ -35,6 +35,10 @@ function custormScrollContent(){
 function custormScrollTree(){
 	$(".main_nav").mCustomScrollbar();
 }
+/*function custormScrollForm(){
+	$(".main_content_info_form").mCustomScrollbar({axis: "x"});
+}*/
+
 (function($){
     $(window).on("load",function(){
        	custormScrollContent();
@@ -46,6 +50,11 @@ function custormScrollTree(){
 		custormScrollTree();
 	});
 })(jQuery);
+/*(function($){
+	$(window).on("load",function(){
+		custormScrollForm();
+	});
+})(jQuery);*/
 
 $('.main_nav_list_title').on('click', function () {
 	var content = $(this).next()
